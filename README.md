@@ -141,7 +141,8 @@ kubectl get pods -n monitoring
 ```
 4. Ver logs generados en tiempo real
 ![Captura de pantalla 2025-05-25 134317](https://github.com/user-attachments/assets/34fbc36c-2380-4d30-bd09-3d7335d5b610)
-![Captura de pantalla 2025-05-25 134317](https://github.com/user-attachments/assets/eec415a1-db57-4f58-a689-d80b49eea8a6)
+![Captura de pantalla 2025-05-25 134501](https://github.com/user-attachments/assets/d35bfea6-aa96-4095-b5e1-10f8d3814f14)
+
 
 ---
 

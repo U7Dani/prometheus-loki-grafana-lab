@@ -154,7 +154,8 @@ kubectl get pods -n monitoring
 
 Se definen en Prometheus (`rules`) o desde Grafana (alertas visuales).
 
-![Captura de pantalla 2025-05-25 134317](https://github.com/user-attachments/assets/583c7a3f-aacf-4232-8195-e49e8a0fca29)
+![Captura de pantalla 2025-05-25 134632](https://github.com/user-attachments/assets/89183eb5-e5d3-45b7-810f-1ebfa205e06c)
+
 📸 Dashboard principal en Grafana: Application Monitoring & Logging
 Esta captura muestra el dashboard principal integrado en Grafana, donde se visualizan en tiempo real las métricas clave de una aplicación:
 
@@ -171,7 +172,8 @@ Medición de la latencia media (p50) y de alta carga (p95) por método. Permite 
 📉 Status Codes Over Time
 Evolución temporal de los códigos HTTP devueltos. Ayuda a detectar cuándo comenzaron a producirse errores, facilitando el análisis forense o la correlación con eventos externos.
 
-![Captura de pantalla 2025-05-25 134746](https://github.com/user-attachments/assets/b958630e-5391-4f51-972b-29166970e1d2)
+![Captura de pantalla 2025-05-25 134746](https://github.com/user-attachments/assets/75bf2f7b-cb21-4b0e-95ec-90258073703f)
+
 📸 Análisis por volumen y latencia de endpoints
 Esta sección del dashboard ofrece una vista centrada en el tamaño de respuesta, la latencia y el volumen de tráfico por endpoint. Es útil para identificar cuellos de botella, endpoints lentos y puntos calientes de uso.
 

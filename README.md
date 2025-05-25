@@ -1,3 +1,4 @@
+![image](https://github.com/user-attachments/assets/b6e76d57-7e68-46fe-8e2b-8be3a263b1bc)
 
 # 📦 prometheus-loki-grafana-lab
 
@@ -118,6 +119,7 @@ Verifica que los pods estén corriendo:
 ```bash
 kubectl get pods -n monitoring
 ```
+![Captura de pantalla 2025-05-25 134910](https://github.com/user-attachments/assets/5abaf044-89e2-4aa4-b88c-31ebe1dc9f0b)
 
 ---
 
@@ -138,6 +140,8 @@ kubectl get pods -n monitoring
 {app="log-generator"}
 ```
 4. Ver logs generados en tiempo real
+![Captura de pantalla 2025-05-25 134317](https://github.com/user-attachments/assets/34fbc36c-2380-4d30-bd09-3d7335d5b610)
+![Captura de pantalla 2025-05-25 134317](https://github.com/user-attachments/assets/eec415a1-db57-4f58-a689-d80b49eea8a6)
 
 ---
 
@@ -150,6 +154,53 @@ kubectl get pods -n monitoring
 
 Se definen en Prometheus (`rules`) o desde Grafana (alertas visuales).
 
+![Captura de pantalla 2025-05-25 134317](https://github.com/user-attachments/assets/583c7a3f-aacf-4232-8195-e49e8a0fca29)
+📸 Dashboard principal en Grafana: Application Monitoring & Logging
+Esta captura muestra el dashboard principal integrado en Grafana, donde se visualizan en tiempo real las métricas clave de una aplicación:
+
+📊 Paneles destacados:
+🔁 Request Rate by Method
+Muestra el número de peticiones por segundo (req/s) clasificadas por método HTTP (GET, DELETE, HFAD, etc.). Ideal para detectar incrementos súbitos de tráfico o cambios inesperados en la distribución de métodos.
+
+📈 Status Code Distribution
+Diagrama circular con los códigos HTTP devueltos (2xx, 4xx, 5xx...). Una alta proporción de errores (404, 503) puede indicar fallos en endpoints o incidentes activos.
+
+⏱️ Response Time by Method (p50 y p95)
+Medición de la latencia media (p50) y de alta carga (p95) por método. Permite identificar degradaciones de rendimiento en rutas específicas.
+
+📉 Status Codes Over Time
+Evolución temporal de los códigos HTTP devueltos. Ayuda a detectar cuándo comenzaron a producirse errores, facilitando el análisis forense o la correlación con eventos externos.
+
+![Captura de pantalla 2025-05-25 134746](https://github.com/user-attachments/assets/b958630e-5391-4f51-972b-29166970e1d2)
+📸 Análisis por volumen y latencia de endpoints
+Esta sección del dashboard ofrece una vista centrada en el tamaño de respuesta, la latencia y el volumen de tráfico por endpoint. Es útil para identificar cuellos de botella, endpoints lentos y puntos calientes de uso.
+
+📦 Paneles destacados:
+📐 Response Size by Method
+Tamaño promedio de las respuestas HTTP según el método (GET, DELETE, HFAD).
+Útil para detectar:
+
+Respuestas inesperadamente grandes (p. ej. fugas de datos).
+
+Cambios de comportamiento tras despliegues.
+
+🐢 Top 10 Slowest Endpoints (p95)
+Lista de rutas que, en el 95% de las veces, tienen mayor latencia.
+Ideal para enfocar esfuerzos de optimización o detección de recursos críticos.
+
+🔥 Top 10 Endpoints by Request Volume
+Muestra los endpoints con más tráfico.
+Su análisis permite priorizar:
+
+Endpoints más expuestos a errores o abusos.
+
+Objetivos potenciales en escenarios de ataque.
+
+
+
+
+
+
 ---
 
 ## 📌 Ideas para el futuro
@@ -160,14 +211,6 @@ Se definen en Prometheus (`rules`) o desde Grafana (alertas visuales).
 - Dashboards por tipo de incidente (seguridad, rendimiento)
 - Alertas con **Slack**, **Telegram**, **Email**
 
----
-
-## 📸 Capturas de ejemplo
-
-Agrega aquí capturas de:
-- Dashboards en Grafana
-- Logs desde Loki
-- Alertas activas
 
 ---
 
